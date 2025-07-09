@@ -525,7 +525,7 @@ assureDownloadableFile() {
 # $1 - OPTIONAL installer binary location, defaulted to ${SUIF_INSTALL_INSTALLER_BIN}, which is also defaulted to /tmp/installer.bin
 assureDefaultInstaller() {
   local installerUrl="https://delivery04-mul.dhe.ibm.com/sar/CMA/OSA/0cx80/0/IBM_webMethods_Install_Linux_x64.bin"
-  local installerSha256Sum="2cdb193d718423e6514cf66543185887d9963836779d97b1e07e80801dab2efc"
+  local installerSha256Sum="46f725e9f0668945912944b0c3d562d9a39274942b530b72b1b08494a1044099"
   SUIF_INSTALL_INSTALLER_BIN="${SUIF_INSTALL_INSTALLER_BIN:-/tmp/installer.bin}"
   local installerBin="${1:-$SUIF_INSTALL_INSTALLER_BIN}"
   if ! assureDownloadableFile "${installerBin}" "${installerUrl}" "${installerSha256Sum}"; then
@@ -539,7 +539,7 @@ assureDefaultInstaller() {
 # $1 - OPTIONAL SUM bootstrap binary location, defaulted to ${SUIF_PATCH_SUM_BOOTSTRAP_BIN}, which is also defaulted to /tmp/sum-bootstrap.bin
 assureDefaultSumBoostrap() {
   local sumBoostrapUrl="https://delivery04-mul.dhe.ibm.com/sar/CMA/OSA/0crqw/0/IBM_webMethods_Update_Mnger_Linux_x64.bin"
-  local sumBoostrapSha256Sum="b4f2d131512255c60bd5246c07129cdcf653acfa6fecf34ce7e98f060e6ee26a"
+  local sumBoostrapSha256Sum="a997a690c00efbb4668323d434fa017a05795c6bf6064905b640fa99a170ff55"
   SUIF_PATCH_SUM_BOOTSTRAP_BIN="${SUIF_PATCH_SUM_BOOTSTRAP_BIN:-/tmp/sum-bootstrap.bin}"
   local lSumBootstrap="${1:-$SUIF_PATCH_SUM_BOOTSTRAP_BIN}"
   if ! assureDownloadableFile "${lSumBootstrap}" "${sumBoostrapUrl}" "${sumBoostrapSha256Sum}"; then
