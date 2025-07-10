@@ -716,16 +716,16 @@ generateProductsImageFromTemplate() {
     local lSdcServerUrl
     case "${1}" in
     *"/1005/"*)
-      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1011:-"https\://sdc-hq.softwareag.com/cgi-bin/dataservewebM105.cgi"}
+      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1005:-"https\://sdc.webmethods.io/cgi-bin/dataservewebM105.cgi"}
       ;;
     *"/1007/"*)
-      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1011:-"https\://sdc-hq.softwareag.com/cgi-bin/dataservewebM107.cgi"}
+      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1007:-"https\://sdc.webmethods.io/cgi-bin/dataservewebM107.cgi"}
       ;;
     *"/1011/"*)
-      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1011:-"https\://sdc-hq.softwareag.com/cgi-bin/dataservewebM1011.cgi"}
+      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1011:-"https\://sdc.webmethods.io/cgi-bin/dataservewebM1011.cgi"}
       ;;
     *)
-      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1011:-"https\://sdc-hq.softwareag.com/cgi-bin/dataservewebM1015.cgi"}
+      lSdcServerUrl=${SUIF_SDC_SERVER_URL_1015:-"https\://sdc.webmethods.io/cgi-bin/dataservewebM1015.cgi"}
       ;;
     esac
 
@@ -876,6 +876,8 @@ checkSetupTemplateBasicPrerequisites() {
 }
 
 checkEmpowerCredentials(){
+
+  return 0 # TODO: move these on IBM servers
   # Check if credentials are valid
   logI "[setupFunctions.sh:checkEmpowerCredentials()] - Checking if provided Empower credentials are valid..."
 
